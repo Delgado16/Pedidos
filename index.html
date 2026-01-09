@@ -1032,6 +1032,7 @@
             // Si no se ha seleccionado un horario, usar el horario por defecto según la hora actual
             let deliveryTime = selectedDeliveryTime;
             
+            
             if (!deliveryTime) {
                 deliveryTime = (currentHour < 12) ? 'morning' : 'afternoon';
                 selectDeliveryTime(deliveryTime);
@@ -1275,7 +1276,7 @@
                       `Pedido realizado el: ${new Date().toLocaleString('es-ES')}`;
             
             // Número de WhatsApp de la empresa (cambiar por el número real)
-            const phoneNumber = "1234567890";
+            const phoneNumber = "84757408";
             
             // Abrir WhatsApp
             window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
