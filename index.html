@@ -1253,8 +1253,7 @@
             const products = getProducts();
             
             // Crear mensaje para WhatsApp
-            let message = `*PEDIDO CONFIRMADO - CLIENTE FRECUENTE*%0A%0A` +
-                         `*Empresa:* HUEVOS EXPRESS%0A` +
+            let message = `*PEDIDO CONFIRMADO - CLIENTE PRIORITARIO*%0A%0A` +
                          `*Cliente:* ${name}%0A` +
                          `*Dirección:* ${address}%0A%0A` +
                          `*PRODUCTOS:*%0A`;
@@ -1273,7 +1272,7 @@
                       `*Fecha:* ${deliveryDate}%0A` +
                       `*Horario:* ${deliverySchedule}%0A%0A` +
                       `*ESTADO:* PEDIDO CONFIRMADO%0A` +
-                      `Pedido realizado el: ${new Date().toLocaleString('es-ES')}`;
+                      `Pedido realizado el: ${new Date().toLocaleString('es-ES', { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true })}`;
             
             // Número de WhatsApp de la empresa (cambiar por el número real)
             const phoneNumber = "84757408";
